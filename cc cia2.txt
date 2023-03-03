@@ -1,0 +1,13 @@
+server {
+    listen 80;
+        server_name cc;
+        root "/home/ubuntu/ImageClassifier/UI";
+        index index.html index.htm;
+        location /api/ {
+             rewrite ^/api(.*) $1 break;
+             proxy_pass http://127.0.0.1:5000;
+        }
+}
+
+
+ssh -i "C:\Users\saudq\Downloads\cc_cia2.pem" ubuntu@ec2-100-26-155-182.compute-1.amazonaws.com

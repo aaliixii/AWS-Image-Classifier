@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Face Detection</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dropzone.min.css">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    
+
+</head>
+<body>
+  
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="row">
+                <div class="col-12 mx-auto">
+                    <form action="/file-upload" class="dropzone" id="dropzone">
+                        <div class="dz-message needsclick">
+                            <img src="./images/upload.png" width="50vw" height="50vw"><br>
+                            <span class="note needsclick">Drop files here or click to upload</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-3 mx-auto">
+                    <button id="submitBtn" type="button" class="btn btn-success">Detect</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-sm-8 error" id="error" >
+            <p>Can't detect face. Classifier was not able to detect the image</p>
+        </div>
+
+        <div class="col-sm-4" id="resultHolder">
+        </div>
+        <div class="col-sm-4" id="divClassTable">
+            <table id="classTable">
+                    <tr>
+                        <th>Driver</th>
+                        <th>Probability Score</th>
+                    </tr>
+                    <tr>
+                        <td>Carlos Sainz</td>
+                        <td id="score_carlos_sainz"></td>
+                    </tr>
+                    <tr>
+                        <td>Charles Leclerc</td>
+                        <td id="score_charles_leclerc"></td>
+                    </tr>
+                    <tr>
+                        <td>Daniel Ricciardo</td>
+                        <td id="score_daniel_ricciardo"></td>
+                    </tr>
+                    <tr>
+                        <td>Fernando Alonso</td>
+                        <td id="score_fernando_alonso"></td>
+                    </tr>
+                    <tr>
+                        <td>George Russell</td>
+                        <td id="score_george_russell"></td>
+                    </tr>
+                    <tr>
+                        <td>Lewis Hamilton</td>
+                        <td id="score_lewis_hamilton"></td>
+                    </tr>
+                    <tr>
+                        <td>Max Verstappen</td>
+                        <td id="score_max_verstappen"></td>
+                    </tr>
+                    <tr>
+                        <td>Sebastian Vettel</td>
+                        <td id="score_sebastian_vettel"></td>
+                    </tr>
+                    <tr>
+                        <td>Sergio Perez</td>
+                        <td id="score_sergio_perez"></td>
+                    </tr>
+                    <tr>
+                        <td>Valtteri Bottas</td>
+                        <td id="score_valtteri_bottas"></td>
+                    </tr>
+            </table>
+        </div>
+        
+    </div>
+
+
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="./dropzone.min.js"></script>
+<script src="./script.js"></script>
+</html>
