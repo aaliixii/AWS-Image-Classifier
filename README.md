@@ -104,7 +104,7 @@ sudo vim cc.conf
 ```
 
 Add the following to the cc.conf:
-```json
+```python
 server {
     listen 80;
         server_name cc;
