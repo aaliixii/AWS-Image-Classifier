@@ -146,3 +146,6 @@ Run server.py to start the Flask server
 ```console
 python3 /path/to/server.py
 ```
+
+We now have a Cloud Deployed Classification model which can be accessed through the Public DNS provided by your EC2 instance.
+
